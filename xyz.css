@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ############### Utiliti classes ########### */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-primary{
+    color: #fff;
+    background: #16a083;
+}
+
+/* ############# NAVBAR Styling For Desktop ############ */
+
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #ffffff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 999;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+.logo{
+    order: 1;
+    color: #000000;
+    font-size: 3rem;
+}
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+.navbar a:hover{
+    color: #8b8700;
+}
+
+/* ############# Showcase styling ############# */
+
+.showcase-area{
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./pexels-thirdman-5327584.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+/* ################ About US ###################### */
+
+#about{
+    padding: 50px 0px;
+    background: #f5f5f7;
+}
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+#about h2{
+    font-size: 3.2rem;
+}
+#about p{
+    font-size: 1.6rem;
+    color: #555;
+}
+#about .small{
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.about-img{
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translate(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    align-self: center;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-img img{
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ############ Types of foods ################ */
+
+#food{
+    padding: 5rem 0 10rem 0;
+}
+.food-type{
+    position: relative;
+}
+#food h2{
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #555;
+    font-size: 3rem;
+}
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-container img{
+    display: block;
+    width: 350px;
+    margin: auto;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    object-position: center;
+}
+
+.img-container{
+    position: relative;
+    width: 350px;
+}
+.img-content{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out,
+                top 0.3s ease-in-out;
+}
+
+.img-content h3{
+    color: #fff;
+    font-size: 3rem;
+}
+.img-content {
+    font-size: 1.2rem;
+}
+
+.img-container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000be;
+    opacity: 0;
+    z-index: 1;
+}
+.img-container:hover::after{
+    opacity: 1;
+}
+
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 50%;
+}
+
+/* =================== Download Section ================*/
+
+.showcase_{
+    background-color: #f5f5f7;
+    padding: 50px 0px;
+    /* border: 3px solid red; */
+}
+
+.container_{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    /* border: 3px solid red; */
+    /* margin: 0px 170px; */
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.row_{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 0px 0px 20px 0px #aaa;
+    border-radius: 20px;
+}
+
+.img-box_{
+    width: 40%;
+    height: 300px;
+    /* border: 2px solid red; */
+}
+
+.text-box_{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* border: 2px solid green; */
+    width: 60%;
+    height: 300px;
+    padding: 50px 15px;
+}
+
+.text-box_ h2{
+    width: 25%;
+    border-right: 1px solid black;
+    margin-right: 5px;
+    /* padding-top: 50px; */
+    align-self: center;
+    /* border: 1px solid black; */
+}
+
+.text-box_ p{
+    width: 50%;
+    padding-left: 5px;
+    /* padding-top: 50px; */
+    align-self: center;
+    /* border: 1px solid red; */
+}
+
+.text-box_ .download-links_{
+    width: 25%;
+    /* border: 1px solid green; */
+}
+
+.img-box_ img{
+    width: 100%;
+    height: 100%;
+    /* border-radius: 20px; */
+    border-radius: 20px 0px 0px 20px;
+}
+
+.download_{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-code_ img{
+    height: 100px;
+    width: 100px;
+}
+
+.play-store_ img{
+    width: 110px;
+}
+
+.apple-store_ img{
+    width: 110px;
+}
+
+
+/* ################ Testimonial #################### */
+
+/* .testimonial-title{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #444;
+    padding: 40px 0;
+}
+
+.testimonial-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.testimonial-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+    text-align: center;
+}
+.customer-photo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+} */
+
+#testimonials{
+    padding: 5rem 0rem;
+    background: #f1f1f1;
+}
+.testimonial-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #555;
+}
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.testimonial-container .checked{
+    color: #ff9529;
+}
+.testimonial-box .testimonail-text{
+    margin: 1rem 0;
+    color: #444;
+}
+.testimonial-box{
+    text-align: center;
+    padding: 1rem;
+}
+.customer-photo img{
+    display: block;
+    width: 100px;
+    /* margin-top: 500px; */
+    /* padding-top: 100px; */
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+
+/* ================ Newsletter Section ===================== */
+#newsletter {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.containerr {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#newsletter h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#newsletter p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#subscribe-form {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#subscribe-form input {
+    /* display: inline-block; */
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+    /* height: 0px; */
+    max-width: 100%;
+}
+
+#subscribe-form button {
+    /* display: inline-block; */
+    padding: 0px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #16a083;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+#subscribe-form button:hover {
+    background-color: #4cae4c;
+}
+
+/* ################### Contact us ################# */
+
+#contact{
+    background: #ffffff;
+}
+.contact-container{
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+.contact-img{
+    width: 50%;
+}
+.contact-img img{
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 400px;
+    padding: 0 40px;
+}
+
+.form-container .btn{
+    width: 100px;
+}
+.form-container h2{
+    margin-bottom: 20px;
+}
+input[type=text]{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+input[type=email]{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.form-container input{
+    display: block;
+}
+
+.form-container h2{
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+/* ################################### Footer Styling ####################### */
+
+.footer{
+    background: #16a083;
+    padding: 70px 0px;
+    /* margin-top: 100px; */
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(239, 239, 239);
+    justify-content: space-between;
+}
+
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    letter-spacing: 0.15rem;
+}
+
+.footer-col{
+    width: 20%;
+    padding: 0px 15px;
+}
+
+.footer-col h4{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.footer-col h4.footer-logo{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.footer-col li{
+    line-height: 35px;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.footer-input{
+    padding: 7px 15px;
+    margin-top: 12px;
+    background: transparent;
+    color: white;
+    border: 1.5px solid rgb(225, 225, 225);
+    border-radius: 3px;
+}
+
+.footer-input::placeholder{
+    color: #fff;
+}
+
+.logo-text{
+    font-size: 1.3rem;
+}
+
+.qr-code img{
+    width: 90px;
+    height: 90px;
+}
+
+.download{
+    display: flex;
+    justify-content: space-between;
+}
+
+.playstore-icon{
+    width: 120px;
+    /* border-radius: 10px; */
+}
+
+.store-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 10px;
+}
+
+.footer-col .social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    color: white;
+    height: 40px;
+    width: 30px;
+    font-size: 23px;
+    margin-top: 20px;
+    /* color: transparent; */
+    /* border: 2px solid currentColor; */
+}
+
+.end-footer{
+    background: #33b4ff;
+    height: 70px;
+    border-top: 1px solid rgba(183, 183, 183, 0.909);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.end-footer p{
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.813);
+}
+
+/* ################### Media quries #################### */
+
+@media ( max-width: 800px){
+    .navbar-container{
+        flex-direction: column;
+        height: 80px;
+    }
+    .food-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .food-type:not(:last-child){
+        margin-bottom: 3rem;
+    }
+    .testimonial-container{
+        flex-direction: column;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+    .form-container h2{
+        text-align: center;
+        margin: 25px auto;
+    }
+    .form-container .btn{
+        margin: auto;
+    }
+    /* .img-container::after{
+        width: 50%;
+        left: 25%;
+    } */
+    .form-container{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .contact-img{
+        width: 100%;
+    }
+    .contact-img img{
+        width: 100%;
+    }
+    .img-container{
+        margin: 0 auto;
+    }
+
+    .food-menu-item{
+        flex-direction: column;
+    }
+    .food-menu-item img{
+        margin: 0 auto;
+    }
+    .food-description{
+        text-align: center;
+    }
+
+}
